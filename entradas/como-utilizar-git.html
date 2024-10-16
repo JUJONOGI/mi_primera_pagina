@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo Utilizar Git: Guía para Principiantes</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Cómo Utilizar Git: Guía para Principiantes</h1>
+</header>
+
+<nav>
+    <a href="../index.html">Inicio</a>
+    <a href="../blog.html">Blog</a>
+    <a href="../index.html#contacto">Contacto</a>
+</nav>
+
+<main>
+    <section>
+        <h2>Introducción</h2>
+        <p>Git es una herramienta esencial para el control de versiones en el desarrollo de software. En esta guía, aprenderás los conceptos básicos para empezar a utilizar Git de manera efectiva.</p>
+    </section>
+
+    <section>
+        <h2>1. Inicialización del Repositorio Local</h2>
+        <p>Para comenzar a usar Git en tu proyecto, primero debes inicializar un repositorio local. Esto se hace utilizando el comando <code>git init</code>.</p>
+        <pre><code>git init</code></pre>
+        <p>Este comando crea un subdirectorio oculto llamado <code>.git</code> que contiene todos los archivos necesarios para el control de versiones.</p>
+        <p><strong>Ejemplo Práctico:</strong></p>
+        <pre><code>cd mi-proyecto
+git init</code></pre>
+        <img src="../imagenes/inicializacion_git.png" alt="Inicialización de Git">
+    </section>
+
+    <section>
+        <h2>2. Creación de Branches</h2>
+        <p>Las ramas (branches) en Git permiten trabajar en diferentes funcionalidades o correcciones sin afectar la rama principal (<code>main</code>). Esto facilita el desarrollo colaborativo y el manejo de versiones.</p>
+        <p><strong>Crear una Nueva Rama:</strong></p>
+        <pre><code>git branch nombre-de-la-rama</code></pre>
+        <p><strong>Cambiar de Rama:</strong></p>
+        <pre><code>git checkout nombre-de-la-rama
+# o usando git switch
+git switch nombre-de-la-rama</code></pre>
+        <p><strong>Unir Ramas con Merge:</strong></p>
+        <pre><code>git checkout main
+git merge nombre-de-la-rama</code></pre>
+        <p><strong>Ejemplo Práctico:</strong></p>
+        <pre><code>git branch feature/nueva-funcionalidad
+git checkout feature/nueva-funcionalidad
+
+# Realizar cambios en el código
+
+git add .
+git commit -m "Agregar nueva funcionalidad"
+git checkout main
+git merge feature/nueva-funcionalidad</code></pre>
+        <img src="../imagenes/creacion_merge_branches.png" alt="Creación y Merge de Branches">
+    </section>
+
+    <section>
+        <h2>3. Agregar un Repositorio Remoto</h2>
+        <p>Conectar tu repositorio local a un repositorio remoto en GitHub te permite respaldar tu código y colaborar con otros desarrolladores.</p>
+        <p><strong>Agregar el Repositorio Remoto:</strong></p>
+        <pre><code>git remote add origin https://github.com/JUJONOGI/mi_primera_pagina.git</code></pre>
+        <p><strong>Enviar Cambios al Repositorio Remoto:</strong></p>
+        <pre><code>git push -u origin main</code></pre>
+        <p><strong>Ejemplo Práctico:</strong></p>
+        <pre><code>git remote add origin https://github.com/JUJONOGI/mi_primera_pagina.git
+git push -u origin main</code></pre>
+        <img src="../imagenes/agregar_repositorio_remoto.png" alt="Agregar Repositorio Remoto">
+    </section>
+
+    <section>
+        <h2>Conclusión</h2>
+        <p>En esta guía, has aprendido los fundamentos básicos para utilizar Git en tus proyectos. Desde la inicialización de un repositorio local hasta la creación de ramas y la conexión con un repositorio remoto, estos conceptos te ayudarán a gestionar de manera efectiva el control de versiones en tus desarrollos.</p>
+    </section>
+
+    <section>
+        <h2>Enlace a mi Página Personal</h2>
+        <p>Puedes visitar mi <a href="../index.html">página personal</a> para ver más entradas de mi blog y otros proyectos en los que estoy trabajando.</p>
+    </section>
+
+    <section>
+        <h2>Desarrollo del Tutorial</h2>
+        <p>Para desarrollar este tutorial sobre Git, comencé investigando las funcionalidades básicas de Git y su importancia en el desarrollo colaborativo. Planeé la estructura de la entrada dividiéndola en secciones clave: inicialización del repositorio, creación de branches y agregar un repositorio remoto.</p>
+        <p>Durante el proceso, enfrenté desafíos al explicar conceptos como el merge de ramas de manera sencilla. Superé esto incluyendo ejemplos prácticos y capturas de pantalla para ilustrar cada paso. Finalmente, revisé y edité el contenido para asegurarme de que fuera claro y fácil de seguir para principiantes.</p>
+    </section>
+</main>
+
+<footer>
+    <p>© 2024 Mi Página Personal - Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>
