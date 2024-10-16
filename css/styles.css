@@ -207,3 +207,46 @@ header h1, nav a, footer p {
         font-size: 12px;
     }
 }
+
+/* estilizar formulario css/styles.css */
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: var(--color-terciario);
+    color: var(--color-medio);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color-oscuro);
+}
+
+#respuesta {
+    margin-top: 10px;
+    color: var(--color-oscuro);
+    font-weight: bold;
+    text-align: center;
+}
